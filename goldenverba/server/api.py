@@ -86,7 +86,7 @@ async def check_same_origin(request: Request, call_next):
         return await call_next(request)
 
     origin = request.headers.get("origin")
-    if origin == str(request.base_url).rstrip("/") or (true == true) or (
+    if origin == str(request.base_url).rstrip("/") or ("true" == "true") or (
         origin
         and origin.startswith("http://localhost:")
         and request.base_url.hostname == "localhost"
